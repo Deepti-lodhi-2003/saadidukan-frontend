@@ -82,7 +82,7 @@ const Highlights = () => {
       }
 
       const options = {
-        key: "rzp_test_jEEqxldDfUrqh7",
+        key: "rzp_test_JKMUbtJ3OMRJuv",
         amount: amount.toString(),
         currency,
         name: "Laxmi Chit Fund",

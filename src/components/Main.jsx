@@ -14,7 +14,7 @@ const HomeSection = () => {
 
   const services = [
     {
-      title: "Makeup Artist",
+      title: "Makeup Artist12",
       img: "https://www.shaadidukaan.com/view/images/cate_images/b/11.webp",
     },
     {
@@ -135,11 +135,8 @@ const HomeSection = () => {
 >
   <div
     className="text-white mt-20 md:mt-52 px-4 w-full"
-    data-aos="fade-up"
   >
     <h1
-      data-aos="zoom-in"
-      data-aos-delay="100"
       className="mx-auto text-xl sm:text-2xl md:text-3xl w-full max-w-md bg-black/60 px-2 py-2 transition-transform duration-500 hover:scale-110"
     >
       A <span className="text-pink-400">Big Day</span> Celebrations!
@@ -147,16 +144,12 @@ const HomeSection = () => {
 
     <p
       className="text-base sm:text-lg font-semibold mt-2"
-      data-aos="fade-up"
-      data-aos-delay="200"
     >
       Book Verified Wedding Vendors Here.
     </p>
 
     <div
       className="flex flex-col md:flex-row items-center justify-center mt-6 sm:space-x-0 space-y-3 sm:space-y-0 px-2  md:px-0"
-      data-aos="fade-up"
-      data-aos-delay="300"
     >
       <input
         type="text"

@@ -70,7 +70,7 @@ const Wedding = () => {
             {features.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-400 rounded-lg shadow-sm hover:shadow-md transition w-full md:w-1/3 p-6 text-center bg-white"
+                className="border border-gray-400 rounded-lg shadow-sm  w-full md:w-1/3 p-6 text-center bg-white transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
               >
                 <img src={item.img} alt={item.title} className="w-20 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-[#1c355e]">{item.title}</h3>

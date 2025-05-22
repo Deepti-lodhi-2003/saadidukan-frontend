@@ -14,6 +14,7 @@ import Register from './components/Register'
 import Profile from './components/Profile'
 import ForgotForm from './components/ForgotForm';
 import Highlights from './components/Highlights';
+import Credits from './components/Credits';
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/profile' element={<Profile />} />
           <Route path="/forgot-password" element={<ForgotForm/>} />
           <Route path="/highlights" element={<Highlights />} />
+          <Route path="/credits" element={<Credits />} />
         </Routes>
       </BrowserRouter>      
     </>

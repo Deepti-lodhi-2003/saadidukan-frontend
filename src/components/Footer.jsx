@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -91,7 +92,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Pay Now</h3>
             <div className="pt-3 flex flex-col gap-4">
               <Link to="/highlights">
-              <button className="bg-pink-600 text-white px-4 py-2 text-sm w-max">
+              <button className="bg-[#ed4856] text-white px-4 py-2 text-sm w-max">
                 Pay Now
               </button>
               </Link>
@@ -130,7 +131,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="mt-16 text-center text-sm text-white pb-10" >
+        Made with ❤️ by the  <Link to="/credits"><span className="font-semibold text-[#ed4856]">ShaadiDukaan Team</span></Link>. ©{" "}
+        {new Date().getFullYear()} All rights reserved.
       </div>
+      </div>
+
     </footer>
   );
 };

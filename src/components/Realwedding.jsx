@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -67,7 +66,7 @@ const RealWedding = () => {
             </div>
 
             {/* Advertisement */}
-            <div className="mb-5">
+            <div className="mb-5 transition-transform duration-300 hover:scale-105">
               <div className="flex items-center justify-center mb-3">
                 <div className="h-[1.6px] bg-gray-400 w-1/2"></div>
                 <span className="text-[#6D7179] text-base mx-3">Advertisement</span>
@@ -100,7 +99,7 @@ const RealWedding = () => {
                 text: 'Like us on Facebook',
               },
             ].map((item, i) => (
-              <div key={i} className={`${item.bg} text-center p-6 rounded-md`}>
+              <div key={i} className={`${item.bg} text-center p-6 rounded-md transition-transform duration-300 hover:rotate-3`}>
                 <i className={`${item.icon} text-white text-3xl`}></i>
                 <span className="block text-white text-xl font-bold py-2">{item.text}</span>
                 <p className="text-white text-sm">@ Shaadidukaan</p>
@@ -127,7 +126,7 @@ const RealWedding = () => {
                   <img
                     src={`https://www.shaadidukaan.com/view/images/cate_images/b/${index + 1}.webp`}
                     alt={category}
-                    className="w-full h-[160px] object-cover"
+                    className="w-full h-[160px] object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <h2 className="text-center text-sm font-medium py-2 px-1">{category}</h2>
                 </div>

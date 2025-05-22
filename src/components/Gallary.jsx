@@ -123,7 +123,7 @@ const Gallery = () => {
             <img
               src={img.src}
               alt={img.title}
-              className="w-full h-64 object-cover"
+              className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
             />
             <div className="p-2 text-center font-medium text-sm text-gray-700">
               {img.title}

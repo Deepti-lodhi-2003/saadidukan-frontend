@@ -3,12 +3,14 @@ import React, { useEffect } from "react";
 import { FaGlobe, FaHeart, FaStore, FaRing } from 'react-icons/fa';
 import Header from "./Header";
 import Footer from "./Footer";
+import Whysadidukan from "./Whysadidukan";  
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 const HomeSection = () => {
 
@@ -82,28 +84,78 @@ const HomeSection = () => {
     ],
   };
 
-  const stats = [
-    {
-      title: "Vendors",
-      icon: "https://www.shaadidukaan.com/view/images/w-vendors-icon.webp",
-      value: "70k+",
-      description: "Trusted Vendors",
-    },
-    {
-      title: "Cities",
-      icon: "https://www.shaadidukaan.com/view/images/w-cities-icon.webp",
-      value: "176",
-      description: "Servicing Cities.",
-    },
-    {
-      title: "Customers",
-      icon: "https://www.shaadidukaan.com/view/images/w-customers-icon.webp",
-      value: "50k+",
-      description: "Happy Customers.",
-    },
-  ];
+ const  slider2 = [
+    "https://www.shaadidukaan.com/view/images/logo_cj1.png",
+      "https://www.shaadidukaan.com/view/images/story1.png",
+      "https://www.shaadidukaan.com/view/images/ani1.png",
+      "https://www.shaadidukaan.com/view/images/new-zee-5.png",
+      "https://www.shaadidukaan.com/view/images/business-standard1.png",
+      "	https://www.shaadidukaan.com/view/images/bw-logo1.png",
+      "	https://www.shaadidukaan.com/view/images/delhilivenews1.png"
+  ]
 
 
+   
+ const marque = [
+  {
+    src: "https://www.shaadidukaan.com/vogue/wp-content/uploads/2025/05/Wedding-Planners-in-Udaipur.webp",
+    title: "Best Wedding Planners in Udaipur for Your Dream Celebration",
+    subtitle: "Often hailed as the “Wedding Capital”,&nbsp;&nbsp;Udaipur is one of the most romanti...",
+  },
+  {
+    src: "https://www.shaadidukaan.com/vogue/wp-content/uploads/2025/05/Bollywood_Bridal_Jewellery_-_Featured_Photo_.webp",
+    title: "Bollywood Brides &amp; The Jewellery That Stole The Show",
+    subtitle: "Bollywood divas don’t merely follow trends, they are the trendsetters, especia...",
+  },
+  {
+    src: "https://www.shaadidukaan.com/vogue/wp-content/uploads/2025/05/Bridal_Hair_Accessories-e1747639747289.webp",
+    title:"Spellbound Bridal Hair Accessories: From Veils To ...",
+    subtitle: "It’s the delicate and sparkling details that cast quite the enchanting spell a...",
+  },
+  {
+    src: "https://www.shaadidukaan.com/vogue/wp-content/uploads/2025/05/Bridal_Hacks.webp",
+    title: "Bridal Hacks You Didn’t Know You Needed",
+    subtitle: "Having cold feet before the wedding is pretty normal in brides &amp; some may tr...",
+  },
+  {
+    src: "https://www.shaadidukaan.com/vogue/wp-content/uploads/2025/05/Lucknow-Wedding-Planners-2.webp",
+    title: "10 Best Wedding Planners in Lucknow for Royal &amp; El...",
+    subtitle: "Elegance whispers through centuries-old architecture,&nbsp;culture blooms in every c...",
+  },
+  {
+    src: "https://www.shaadidukaan.com/vogue/wp-content/uploads/2025/05/Reception_Photoshoot_Ideas-e1747307702117.webp",
+    title: "Best Reception Photoshoot Ideas for Every Couple: ...",
+    subtitle: "With the beautiful sunset the vows are exchanged and 'I do’s' are said - and n...",
+  },
+];
+
+
+    const marquesettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "0px",
+    responsive: [
+      {
+        breakpoint: 1580, // large laptop
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 1024, // tablet
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 700, // mobile
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+ 
   const weddings = [
     {
       couple: "Shiv & Priya",
@@ -261,11 +313,18 @@ const HomeSection = () => {
       </div>
 
       {/*------------------------------------------------ */}
-      <div className="w-full bg-[rgb(27,50,95)] text-white px-4 md:px-[8%] py-8 text-center">
-        <h1 className="text-2xl md:text-4xl font-semibold">
-          Getting married soon? Book Wedding Services Here!
+      <div
+       className="w-full text-white px-4 md:px-[8%] py-8 text-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://www.shaadidukaan.com/view/images/home-getting.png')",
+        }}
+        >
+
+        <h1 className="text-2xl md:text-3xl font-semibold md:pt-7">
+          Getting married soon? Book <span className="text-[#ccb1b3]"> Wedding Services </span> Here!
         </h1>
-        <p className="mt-2 text-base md:text-lg">
+        <p className="mt-2 text-base md:text-lg mb-8">
           Available At The Best Prices And With Our Trust.
         </p>
 
@@ -278,7 +337,7 @@ const HomeSection = () => {
               <img
                 src={service.img}
                 alt={service.title}
-                className="h-32 md:h-40 w-full object-cover rounded-t-lg"
+                className="h-32 md:h-30 w-full object-cover rounded-t-lg"
               />
               <h1 className="text-black text-sm md:text-base py-2">
                 {service.title}
@@ -287,11 +346,11 @@ const HomeSection = () => {
           ))}
         </div>
 
-        <a href="/category">
+        <Link to="/category">
           <button className="mt-8 bg-[rgb(237,72,86)] text-white px-6 py-2 hover:opacity-90">
             View All Categories
           </button>
-        </a>
+        </Link>
       </div>
 
       {/* ---------------------------------------------------- */}
@@ -318,45 +377,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-
-      {/* Why Shaadidukaan Section------------------------------- */}
-      <div
-        className="w-full py-20 px-4 text-center"
-        style={{
-          backgroundImage:
-            "url('https://www.shaadidukaan.com/view/images/why-choose-bg.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <h1 className="text-3xl font-bold text-[rgb(27,50,95)] mt-[-62px]">
-          <span className="text-red-600">Why</span> Shaadidukaan?
-        </h1>
-
-        {/* Container with flex, column on mobile and row on desktop */}
-        <div className="mt-16 flex flex-col md:flex-row items-center md:justify-center gap-6">
-          {stats.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-8 rounded-2xl w-[300px] h-[270px] shadow-lg border-2 border-gray-400 relative"
-            >
-              <h1 className="text-xl font-bold mb-2 text-[rgb(27,50,95)]">{item.title}</h1>
-
-              <div className="h-20 w-20 mx-auto mb-4 mt-2 shadow-md rounded-full flex items-center justify-center bg-white">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="h-12 w-12"
-                />
-              </div>
-
-              <h2 className="text-xl text-red-600 font-bold">{item.value}</h2>
-              <p className="text-base mt-1 text-gray-600 font-semibold">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
+<Whysadidukan />
 
       {/* ------------------------------------------------------------------ */}
       <div className="w-full text-center px-6 md:px-20 py-20 bg-[#EBE3D8]">
@@ -376,7 +397,7 @@ const HomeSection = () => {
               <img
                 src={wedding.image}
                 alt={wedding.couple}
-                className="w-full h-60 object-cover transition-transform duration-300 hover:scale-110"
+                className="w-full h-60 object-cover  transition-transform duration-300 hover:scale-110"
               />
               <h1 className="text-xl font-medium mt-4 mb-4 text-gray-800">
                 {wedding.couple}
@@ -385,7 +406,6 @@ const HomeSection = () => {
           ))}
         </div>
       </div>
-
 
       {/* --------------------------------------------------------------- */}
       <div className="bg-[#1B325F] text-white py-12 px-6 md:px-20 flex flex-col md:flex-row gap-10">
@@ -445,6 +465,77 @@ const HomeSection = () => {
         </div>
       </div>
 
+  {/* ----------------- slider 2 ------------ */}
+
+       <div className="max-w-7xl mx-auto px-4">
+  <Slider {...settings}>
+    {slider2.map((img, index) => (
+      <div key={index} className="px-0 sm:px-5">
+        <div className="flex justify-center items-center w-[160px] sm:w-[200px] md:w-[220px] lg:w-full h-[80px] sm:h-[90px] md:h-[100px] lg:h-[10vh] bg-white overflow-hidden transition-transform duration-300 hover:scale-105 mt-10 mb-10">
+          <img
+            src={img}
+            alt={`vendor-${index}`}
+            className="h-full w-auto object-contain"
+          />
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
+
+      {/* -------------------------------------- */}
+  <div
+  className="py-10 overflow-x-hidden relative z-[-2]"
+  style={{
+    backgroundImage: "url('https://www.shaadidukaan.com/view/images/line-bg.jpg')"
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-[#1c355eb3]/90 z-[-1]"></div>
+
+  {/* Content */}
+  <div className="relative z-10">
+    <div className="text-center mb-8 px-4">
+      <h1 className="text-3xl md:text-3xl font-extrabold text-gray-100">
+        Wedding <span className="text-[#ccb1b3]">Vogue</span>
+      </h1>
+      <p className="text-gray-200 mt-2">Read Wedding Planning Tips, Know tos, How tos, Dos and Don'ts & Everything Related To Weddings</p>
+    </div>
+
+    <div className="max-w-7xl mx-auto px-4">
+    <Slider {...marquesettings}>
+  {marque.map((img, index) => (
+    <div key={index} className="px-0 sm:px-1">
+      <div className="w-[300px]] sm:w-[200px] md:w-[220px] lg:w-full h-[40vh] md:h-[390px] shadow-md bg-white overflow-hidden transition-transform duration-300 hover:scale-105 pb-5">
+        {/* Image */}
+        <img
+          src={img.src}
+          alt={`vendor-${index}`}
+          className="w-full h-[240px] sm:h-[250px] object-cover"
+        />
+        {/* Title & Subtitle */}
+        <div className="py-2 px-2">
+          <h3 className="text-sm sm:text-base font-semibold text-[#1c355e] pt-2">{img.title}</h3>
+          <p className="text-xs sm:text-sm text-gray-500 pt-2">{img.subtitle}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
+
+<div className="flex justify-center">
+  <Link to="/weddingVogue">
+    <button className="mt-8 bg-[rgb(237,72,86)] text-white px-6 py-2 hover:opacity-90">
+      View More Blogs
+    </button>
+  </Link>
+</div>
+
+
+    </div>
+  </div>
+</div>
 
 
 {/*-------------------------------------------------------------- */}

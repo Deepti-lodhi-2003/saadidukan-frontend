@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       {/* Logo Section */}
-      <div className="bg-[#1c355e] flex flex-col md:flex-row justify-between items-center px-4 md:px-12 py-3">
+      <div className="bg-[#1c355e] flex md:flex-row justify-between items-center px-4 md:px-12 py-3">
         <img
           src="https://www.shaadidukaan.com/view/images/logo-w.png"
           alt="Logo"
@@ -54,9 +54,9 @@ const Header = () => {
           <Link to="/freeListingPage">
             <h4 className="cursor-pointer font-bold">Free Listing</h4>
           </Link>
-          <Link to="/login">
+          {/* <Link to="/login">
             <h4 className="cursor-pointer font-bold">Login</h4>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -95,7 +95,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="fixed top-0 left-0 w-3/4 sm:w-1/2 h-90 bg-white text-black p-6 flex flex-col gap-4 z-50 shadow-lg rounded-br-4xl transition-all duration-300">
+          <div className="fixed top-40 left-0 w-3/4 sm:w-1/2 h-90 bg-white text-black p-6 flex flex-col gap-4 z-50 shadow-lg rounded-br-4xl transition-all duration-300">
             <div className="flex justify-end">
               <button onClick={() => setMenuOpen(false)}>
                 <FontAwesomeIcon icon={faXmark} />
